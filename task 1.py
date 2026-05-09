@@ -1,10 +1,11 @@
+#NAME:BRIAN KIPLANG'AT ROTICH
+#REG_NO:CIT-227-078/2024
 import tensorflow as tf
 from tensorflow.keras import layers, models
 
 mnist = tf.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 x_train, x_test = x_train / 255.0, x_test / 255.0
-
 model = models.Sequential([
     layers.Flatten(input_shape=(28, 28)),
     layers.Dense(128, activation='relu'),
